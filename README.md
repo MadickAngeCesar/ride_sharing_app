@@ -1,16 +1,16 @@
 # ride_sharing_app
 
-Book your ride as clients 
+- Book your ride as clients 
 
-Publish your rides as drivers
+- Publish your rides as drivers
 
-Track the driver you requested on a google map as clients 
+- Track the driver you requested on a google map as clients 
 
-Locate your client position on google map as drivers
+- Locate your client position on google map as drivers
 
-Get secure payment methods
+- Get secure payment methods
 
-Access your app with your personal password
+- Access your app with your personal password
 
 
 ![Screenshot 2024-02-11 135821](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/bb22da1f-f2c3-41dc-afa4-258c974373d7)
