@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861722803471",
+    "project_id": "ride-sharin-firebase",
+    "storage_bucket": "ride-sharin-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861722803471:android:d4ac734d846d6c6283527a",
+        "android_client_info": {
+          "package_name": "com.example.ride_sharing_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCqjNDVGDqwFtlWHacCIi2btpNU4XsrNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
