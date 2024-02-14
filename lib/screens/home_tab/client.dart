@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:ride_sharing_app/screens/home_tab/map_view.dart';
 
 class ClientTab extends StatefulWidget {
   const ClientTab({super.key});
@@ -16,12 +17,14 @@ class _ClientTabState extends State<ClientTab> {
   final TextEditingController _seatCountController = TextEditingController();
   final TextEditingController _feeCountController = TextEditingController();
   final List<String> _selectedPaymentMethods = [];
-  
+
   bool _isTrackingDriver = false;
   bool _isPayingRide = false;
 
   void _trackNearestDriverOnMap() {
     // Implement functionality to track nearest driver on map
+    Navigator.pushNamed(context, '/mapPage');
+
     setState(() {
       _isTrackingDriver = true;
     });
@@ -112,8 +115,7 @@ class _ClientTabState extends State<ClientTab> {
                   TextFormField(
                     controller: _feeCountController,
                     keyboardType: TextInputType.number,
-                    decoration:
-                        const InputDecoration(labelText: 'Fee'),
+                    decoration: const InputDecoration(labelText: 'Fee'),
                     validator: (value) {
                       if (value!.isEmpty) {
                         return 'Enter payment fee';

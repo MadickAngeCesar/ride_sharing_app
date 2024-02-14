@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ride_sharing_app/screens/settings_page.dart';
-import 'client.dart';
-import 'driver.dart';
-
+import 'package:ride_sharing_app/screens/home_tab/client.dart'; // Import the client tab
+import 'package:ride_sharing_app/screens/home_tab/driver.dart'; // Import the driver tab
+import 'package:ride_sharing_app/screens/settings_page.dart'; // Import the settings page
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // ignore: unused_field
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -36,32 +35,17 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ],
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: 'Drivers'),
+              Tab(text: 'Clients'),
+            ],
+          ),
         ),
-        body: Column(
+        body: const TabBarView(
           children: [
-            TabBar(
-              onTap: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-              tabs: const [
-                Tab(
-                  text: 'Drivers',
-                ),
-                Tab(
-                  text: 'Clients',
-                ),
-              ],
-            ),
-            const Expanded(
-              child: TabBarView(
-                children: [
-                  DriverTab(), // Driver Tab View
-                  ClientTab(), // Client Tab View
-                ],
-              ),
-            ),
+            DriverTab(), // Driver Tab View
+            ClientTab(), // Client Tab View
           ],
         ),
       ),

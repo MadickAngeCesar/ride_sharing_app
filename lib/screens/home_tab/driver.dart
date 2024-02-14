@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:ride_sharing_app/screens/home_tab/map_driver.dart';
 
 class DriverTab extends StatefulWidget {
   const DriverTab({super.key});
@@ -28,7 +29,10 @@ class _DriverTabState extends State<DriverTab> {
   void _viewClientLocationOnMap() {
     // Implement functionality to view client location on map
     // You can use maps plugin to display client location
+   Navigator.pushNamed(context, '/mapDrive');
   }
+
+  
 
   @override
   void dispose() {

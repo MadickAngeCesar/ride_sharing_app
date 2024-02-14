@@ -1,0 +1,116 @@
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtGui import QIcon, QKeySequence
+
+
+class Browser(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("Google Chrome")
+        self.setWindowIcon(QIcon("chrome_icon.png"))  # Replace "chrome_icon.png" with the path to your icon
+
+        self.tabs = QTabWidget()
+        self.tabs.setTabsClosable(True)
+        self.tabs.tabCloseRequested.connect(self.close_tab)
+
+        self.add_tab("http://www.google.com")
+
+        self.setCentralWidget(self.tabs)
+        self.showMaximized()
+
+        self.create_actions()
+        self.create_menu()
+
+    def create_actions(self):
+        self.new_tab_action = QAction("New Tab", self)
+        self.new_tab_action.setShortcut(QKeySequence.AddTab)
+        self.new_tab_action.triggered.connect(lambda: self.add_tab("http://www.google.com"))
+
+        self.quit_action = QAction("Quit", self)
+        self.quit_action.setShortcut(QKeySequence.Quit)
+        self.quit_action.triggered.connect(self.close)
+
+    def create_menu(self):
+        menu_bar = self.menuBar()
+        file_menu = menu_bar.addMenu("File")
+        file_menu.addAction(self.new_tab_action)
+        file_menu.addAction(self.quit_action)
+
+    def add_tab(self, url):
+        browser = QWebEngineView()
+        browser.setUrl(QUrl(url))
+        index = self.tabs.addTab(browser, "New Tab")
+
+        navbar = QToolBar()
+        browser.layout().addWidget(navbar)
+
+        back_btn = QAction(QIcon('back.png'), "Back", self)
+        back_btn.triggered.connect(lambda: browser.back())
+        navbar.addAction(back_btn)
+
+        forward_btn = QAction(QIcon('forward.png'), "Forward", self)
+        forward_btn.triggered.connect(lambda: browser.forward())
+        navbar.addAction(forward_btn)
+
+        reload_btn = QAction(QIcon('reload.png'), "Reload", self)
+        reload_btn.triggered.connect(lambda: browser.reload())
+        navbar.addAction(reload_btn)
+
+        home_btn = QAction(QIcon('home.png'), "Home", self)
+        home_btn.triggered.connect(lambda: browser.setUrl(QUrl("http://www.google.com")))
+        navbar.addAction(home_btn)
+
+        url_bar = QLineEdit()
+        url_bar.returnPressed.connect(lambda: self.navigate_to_url(browser, url_bar))
+        navbar.addWidget(url_bar)
+
+        search_btn = QPushButton("Search")
+        search_btn.clicked.connect(lambda: self.navigate_to_url(browser, url_bar))
+        navbar.addWidget(search_btn)
+
+        browser.urlChanged.connect(lambda q, browser=browser: self.update_url_bar(q, browser))
+
+        self.tabs.setCurrentIndex(index)
+
+    def close_tab(self, index):
+        if self.tabs.count() < 2:
+            return
+        self.tabs.removeTab(index)
+
+    def navigate_to_url(self, browser, url_bar):
+        url = url_bar.text()
+        if not url.startswith("http"):
+            url = "http://" + url
+        browser.setUrl(QUrl(url))
+
+    def update_url_bar(self, q, browser):
+        index = self.tabs.indexOf(browser)
+        self.tabs.setTabText(index, q.toString())
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    # Apply dark theme
+    app.setStyle("Fusion")
+    palette = QPalette()
+    palette.setColor(QPalette.Window, QColor(53, 53, 53))
+    palette.setColor(QPalette.WindowText, Qt.white)
+    palette.setColor(QPalette.Base, QColor(25, 25, 25))
+    palette.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
+    palette.setColor(QPalette.ToolTipBase, Qt.white)
+    palette.setColor(QPalette.ToolTipText, Qt.white)
+    palette.setColor(QPalette.Text, Qt.white)
+    palette.setColor(QPalette.Button, QColor(53, 53, 53))
+    palette.setColor(QPalette.ButtonText, Qt.white)
+    palette.setColor(QPalette.BrightText, Qt.red)
+    palette.setColor(QPalette.Link, QColor(42, 130, 218))
+    palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+    palette.setColor(QPalette.HighlightedText, Qt.black)
+    app.setPalette(palette)
+
+    browser = Browser()
+    sys.exit(app.exec_())
