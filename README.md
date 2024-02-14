@@ -1,16 +1,26 @@
 # ride_sharing_app
 
-A new Flutter project.
+- Book your ride as clients 
 
-## Getting Started
+- Publish your rides as drivers
 
-This project is a starting point for a Flutter application.
+- Track the driver you requested on a google map as clients 
 
-A few resources to get you started if this is your first Flutter project:
+- Locate your client position on google map as drivers
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Get secure payment methods
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Access your app with your personal password
+
+
+![Screenshot 2024-02-11 135821](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/bb22da1f-f2c3-41dc-afa4-258c974373d7)
+
+![Screenshot 2024-02-11 135749](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/839b96e3-4e34-4b65-a11b-8d57320a0af0)
+
+![Screenshot 2024-02-11 140334](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/30d0b727-5e0f-47f7-834e-4b66862f9012)
+
+![Screenshot 2024-02-11 140158](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/d34b45c7-2ce7-47a9-a04b-13083482732d)
+
+![Screenshot 2024-02-11 140405](https://github.com/MadickAngeCesar/ride_sharing_app/assets/129757922/6b5076b9-dc3e-4c2d-98f1-063e31a68494)
+
+
