@@ -1,17 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
      <!-- Add the following lines inside the <manifest> element -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- If you require fine location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- If you require coarse location -->
+
 
     <application
         android:label="ride_sharing_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDHyln7nidsQrwjtuKyKyvO41nWt8Rg5aE" />
 
         <activity
             android:name=".MainActivity"
@@ -39,5 +40,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+                <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyANusOKyz12aD4eaLVOdOjbK9UumUhOuXs"/>    
+            
     </application>
 </manifest>

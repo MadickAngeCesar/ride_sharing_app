@@ -10,6 +10,7 @@ class MapDrive extends StatefulWidget {
 }
 
 class _MapDriveState extends State<MapDrive> {
+  // ignore: unused_field
   late GoogleMapController _controller;
   final LatLng _initialLocation = const LatLng(37.7749, -122.4194); // San Francisco, CA
 

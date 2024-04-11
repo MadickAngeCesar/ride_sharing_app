@@ -2,18 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>237453298702-ua3bg8i48k3pm9bcniorut7fshqkuh8e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.237453298702-ua3bg8i48k3pm9bcniorut7fshqkuh8e</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBcnHYa1BhID794bEvyZEt0s9Wss8drNZU</string>
+	<string>AIzaSyBgDo8vVeR-ioDi7v32yGbxa9L_fpuDhbo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>861722803471</string>
+	<string>237453298702</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.rideSharingApp</string>
 	<key>PROJECT_ID</key>
-	<string>ride-sharin-firebase</string>
+	<string>rideapp-4ccba</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ride-sharin-firebase.appspot.com</string>
+	<string>rideapp-4ccba.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:861722803471:ios:1eed9f5e4f9a38b383527a</string>
+	<string>1:237453298702:ios:38f9e4a9e220b10669005f</string>
 </dict>
 </plist>

@@ -102,7 +102,7 @@ class _ClientTabState extends State<ClientTab> {
                         }
                       });
                     },
-                    items: ['Paypal', 'Cash', 'MOMO', 'Google Pay']
+                    items: ['Cash', 'MOMO', 'Google Pay']
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,

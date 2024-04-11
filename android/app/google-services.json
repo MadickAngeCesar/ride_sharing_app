@@ -1,26 +1,43 @@
 {
   "project_info": {
-    "project_number": "861722803471",
-    "project_id": "ride-sharin-firebase",
-    "storage_bucket": "ride-sharin-firebase.appspot.com"
+    "project_number": "237453298702",
+    "project_id": "rideapp-4ccba",
+    "storage_bucket": "rideapp-4ccba.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:861722803471:android:d4ac734d846d6c6283527a",
+        "mobilesdk_app_id": "1:237453298702:android:2b5cde6bbe1a8b1d69005f",
         "android_client_info": {
           "package_name": "com.example.ride_sharing_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "237453298702-q9ded5h1tf5ob36vm7b8b71ocau04kku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBCqjNDVGDqwFtlWHacCIi2btpNU4XsrNo"
+          "current_key": "AIzaSyAKQZCInB_4hD0_XSMu8LSHnGe9owzRhOI"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237453298702-q9ded5h1tf5ob36vm7b8b71ocau04kku.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "237453298702-ua3bg8i48k3pm9bcniorut7fshqkuh8e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.rideSharingApp"
+              }
+            }
+          ]
         }
       }
     }
